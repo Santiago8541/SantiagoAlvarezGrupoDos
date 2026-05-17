@@ -3,19 +3,17 @@ package co.edu.uniquindio.poo;
 public class Fontaneria extends Servicio {
 
     private boolean corteAgua;
-    private String tipoMaterial;
+    private TipoMaterial material;
 
     public Fontaneria(String id, String descripcion,
                       int duracionEstimada,
                       boolean corteAgua,
-                      String tipoMaterial) {
+                      TipoMaterial material) {
 
         super(id, descripcion, duracionEstimada);
         this.corteAgua = corteAgua;
-        this.tipoMaterial = tipoMaterial;
+        this.material=material;
     }
-
-    @Override
     public double calcularCosto() {
 
         double costo = 40000;
@@ -32,7 +30,7 @@ public class Fontaneria extends Servicio {
         return super.toString() +
                 "\nFontaneria{" +
                 "corteAgua=" + corteAgua +
-                ", tipoMaterial='" + tipoMaterial + '\'' +
+                ", tipoMaterial='" + material + '\'' +
                 '}';
     }
 }
